@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Dream11 Analysis</title>
+  </head>
+  <body>
+  <div class="container-fluid">
+ <!-----file upload code------->
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<div class="card text-center border-dark">
+  <div class="card-header border-dark bg-info">
+    <h5>Dream 11 Analyser</h5>
+  </div>
+  <div class="card-body border-dark">
+    <h5 class="card-title">Investment Analysis && Wallet Analysis</h5>
+<div>
+                <img class="card-img-top" src="{{url_for('static', filename='upload.png')}}" alt="Card image" style="width:15%;height:20%">
+</div>
+
+    <div class="col-lg-3 col-xs-2 col-md-3 col-sm-3  btn btn-primary">
+                <form action="calculate" method="post" enctype="multipart/form-data">
+                  <label class="btn btn-default btn-file">
+                    <h5> <span class='fas fa-file-upload' style='font-size:36px'></span> Upload</h5>
+                    <input type="file" name="myFile" onchange="this.form.submit()" required = 'required' value="" style="display: none;">
+                  </label>
+
+                </form>
+            </div>
+  </div>
+</div>
+</div>
+  </div><br><br>
+
+
+<!----features conditon------->
+
+ {%if show_hidden== True%}
+<div class="row">
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+<div class="card border-dark">
+  <div class="card-header text-center border-dark bg-info">
+    <h5 class="font-weight-bold">Filter</h5>
+  </div>
+  <div class="card-body border-dark text-center">
+      <form action="filter" method="post" enctype="multipart/form-data">
+  <div class="form-row">
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+      <div class="form-group">
+    <label for="exampleFormControlSelect1"><h5 class="font-weight-bold">Time Priode <span class="text-danger">(*coming Soon)</span></h5></label>
+    <select class="form-control" id="exampleFormControlSelect1" disabled name="timepriode" onchange="this.form.submit()">
+      <option  disabled>{{time_priode}}</option>
+      <option  value="Today" disabled>Today</option>
+      <option  value="Yesterday" disabled>Yesterday</option>
+      <option  value="7day" disabled>Last 7 days</option>
+      <option  value="30day" disabled>Last 30 Days</option>
+    </select>
+  </div>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+      <div class="form-group">
+    <label for="exampleFormControlSelect2"><h5 class="font-weight-bold">Tour-Wise</h5></label>
+    <select class="form-control" id="exampleFormControlSelect2"  name="alltour" onchange="this.form.submit()">
+      <option selected>{{tour_wise}}</option>
+      {%for i in tour_list %}
+        <option  value="{{i}}">{{i}}</option>
+      {% endfor %}
+    </select>
+  </div>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+      <div class="form-group">
+    <label for="exampleFormControlSelect3" ><h5 class="font-weight-bold">Select Match</h5></label>
+    <select class="form-control" id="exampleFormControlSelect3" name="allteam" onchange="this.form.submit()">
+      <option  selected>{{select_match}}</option>
+      {%for j in team_list %}
+
+        <option  value="{{j}}">{{j}}</option>
+      {% endfor %}
+    </select>
+  </div>
+    </div>
+
+  </div>
+  </div>
+</div>
+
+</form>
+</div>
+
+</div><br>
+
+{% endif %}
+      {% block body %}
+      {% endblock %}
+
+
+
+
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  </body>
+</html>

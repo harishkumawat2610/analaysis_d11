@@ -1,0 +1,121 @@
+{% extends "re_layout.html" %}
+{% block body %}
+{% if wallate == True %}
+<!------wallate----->
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="card border-dark ">
+                                          <div class="card-header border-dark text-center bg-info">
+                                           <h5 class="font-weight-bold">Dream 11 Wallet Analysis Analysis</h5>
+                                          </div>
+  <div class="card-body border-dark">
+    <div class="row">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div class="card bg-primary border-dark">
+    <div class="card-body text-center border-dark">
+      <p class="card-text font-weight-bold"><h1 class="text-white font-weight-bold">Deposites</h1></p>
+        <p class="card-text font-weight-bold"><h1 class="text-white font-weight-bold">{{cd}}</h1></p>
+    </div>
+  </div>
+      </div><br>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="card bg-warning border-dark">
+                                <div class="card-body text-center border-dark rounded">
+                                        <p class="card-text font-weight-bold"><h1 class="text-white font-weight-bold">Withdrawals</h1></p>
+                                        <p class="card-text font-weight-bold"><h1 class="text-white font-weight-bold">{{cw}}</h1></p>
+                                </div>
+                            </div>
+
+      </div>
+
+
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <div class="card bg-success border-dark">
+                        <div class="card-body text-center border-dark">
+                            <p class="card-text font-weight-bold"><h1 class="text-white font-weight-bold">Profit <span class='fas fa-arrow-up' style='font-size:36px'></span></h1></p>
+                             <p class="card-text font-weight-bold"><h1 class="text-white font-weight-bold">{{wa_profit}}</h1></p>
+                        </div>
+                </div>
+      </div><br>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="card bg-danger border-dark">
+    <div class="card-body text-center border-dark">
+        <p class="card-text font-weight-bold"><h1 class="text-white font-weight-bold">Lose <span class='fas fa-arrow-down' style='font-size:36px'></span></h1></p>
+        <p class="card-text font-weight-bold"><h1 class="text-white font-weight-bold">{{wa_lose}}</h1></p>
+    </div>
+  </div>
+      </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+  </div>
+
+ {% endif %}
+<br><br>
+
+<!------invest------>
+{% if invest == True %}
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="card border-dark ">
+  <div class="card-header text-center bg-info border-dark">
+   <h5 class="font-weight-bold">Dream 11 Investment Analysis</h5>
+  </div>
+  <div class="card-body border-dark">
+    <div class="row">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div class="card bg-primary">
+    <div class="card-body text-center border-dark">
+      <p class="card-text font-weight-bold"><h1 class="text-white font-weight-bold"> Investment</h1></p>
+        <p class="card-text font-weight-bold"><h1 class="text-white font-weight-bold">{{i}}</h1></p>
+    </div>
+  </div>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+<div class="card bg-warning border-dark">
+    <div class="card-body text-center border-dark rounded">
+      <p class="card-text font-weight-bold"><h1 class="text-white font-weight-bold">Winnings</h1></p>
+        <p class="card-text font-weight-bold"><h1 class="text-white font-weight-bold">{{wi}}</h1></p>
+    </div>
+  </div>
+  </div>
+
+      </div>
+
+    <br>
+    <div class="row">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div class="card bg-success border-dark">
+    <div class="card-body text-center border-dark">
+      <p class="card-text font-weight-bold"><h1 class="text-white font-weight-bold">Profit <span class='fas fa-arrow-up' style='font-size:36px'></span></h1></p>
+        <p class="card-text font-weight-bold"><h1 class="text-white font-weight-bold">{{in_profit}}</h1></p>
+    </div>
+  </div>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+<div class="card bg-danger border-dark">
+    <div class="card-body text-center border-dark">
+      <p class="card-text "><h1 class="text-white font-weight-bold">Lose <span class='fas fa-arrow-down' style='font-size:36px'></span></h1></p>
+        <p class="card-text font-weight-bold"><h1 class="text-white font-weight-bold">{{in_lose}} </h1></p>
+    </div>
+  </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+</div>
+
+  </div>
+{% endif %}
+<br><br>
+{% endblock %}

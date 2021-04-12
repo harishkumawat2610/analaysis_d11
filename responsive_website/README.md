@@ -1,2 +1,1 @@
-
-#indianmen #mensfashion #india #fashion #men #indian #portrait #sherwani #desimen #indianmenswear #indianfashion #instagram #indiangroom #style #indianwedding #follow #mumbai #hotmen #indianmensfashion #delhi #instagood #menfashionblogger #menskurta #fitness #portraitphotography #indianman #fashionphotography #malemodel #fashionindia #bhfyp
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6729361187219271680?compact=1" height="284" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
